@@ -7,9 +7,12 @@ export const CounterScreen = () => {
 
   return (
     <View style={styles.container}>
-        <Text style={styles.title}>
-            Contador: {counter}
-        </Text>
+        <View style={styles.circle}>
+            <Text style={styles.title}>
+                Contador: 
+            </Text>
+            <Text style={styles.result}>{counter}</Text>
+        </View>
         <Fab
         title='+1'
         onPress={() => setCounter(counter + 1)}
@@ -34,12 +37,32 @@ export const CounterScreen = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: 'center'
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#ffff66'
+    },
+    circle:{
+        backgroundColor: '#33ccff',
+        justifyContent: 'center',
+        width: 300,
+        height: 300,
+        borderRadius: 300,
+        borderColor: '#ccff66',
+        borderWidth: 2,
+        
     },
     title: {
-        fontSize: 40,
+        fontSize: 30,
         textAlign: 'center',
-        top: -10
+        top: -10,
+        fontStyle: 'italic',
+        color: '#ffff'
     },
+    result: {
+        fontSize: 80,
+        fontWeight: 'bold',
+        color: '#0000cc',
+        textAlign: 'center'
+    }
     
 })
