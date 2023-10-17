@@ -3,7 +3,7 @@ import { Text, View, TouchableOpacity, StyleSheet } from 'react-native'
 import { Fab } from '../components/Fab'
 
 export const CounterScreen = () => {
-    const [counter, setCounter] = useState(10)
+    const [counter, setCounter] = useState(0)
 
   return (
     <View style={styles.container}>
